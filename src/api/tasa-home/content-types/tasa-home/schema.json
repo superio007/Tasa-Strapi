@@ -1,0 +1,17 @@
+{
+  "kind": "singleType",
+  "collectionName": "tasa_homes",
+  "info": {
+    "singularName": "tasa-home",
+    "pluralName": "tasa-homes",
+    "displayName": "TasaHome"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "highlights": {
+      "type": "string"
+    }
+  }
+}
