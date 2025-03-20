@@ -1,0 +1,35 @@
+{
+  "kind": "singleType",
+  "collectionName": "about_pages",
+  "info": {
+    "singularName": "about-page",
+    "pluralName": "about-pages",
+    "displayName": "AboutPage",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "about_hero_section_heading": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::about-hero-section.about-hero-section"
+    },
+    "team_members": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::team-member.team-member"
+    },
+    "our_team": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::our-team.our-team"
+    },
+    "about_hero_descriptions": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::about-hero-description.about-hero-description"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "kind": "collectionType",
+  "collectionName": "about_hero_sections",
+  "info": {
+    "singularName": "about-hero-section",
+    "pluralName": "about-hero-sections",
+    "displayName": "AboutHeroSectionHeading",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Heading": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

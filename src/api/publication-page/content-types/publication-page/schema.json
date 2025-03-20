@@ -1,0 +1,29 @@
+{
+  "kind": "singleType",
+  "collectionName": "publication_pages",
+  "info": {
+    "singularName": "publication-page",
+    "pluralName": "publication-pages",
+    "displayName": "PublicationPage"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "publication_hero_section": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::publication-hero-section.publication-hero-section"
+    },
+    "publications_slider": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::publications-slider.publications-slider"
+    },
+    "publications": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::publication.publication"
+    }
+  }
+}

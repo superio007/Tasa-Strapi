@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "enquery_forms",
+  "info": {
+    "singularName": "enquery-form",
+    "pluralName": "enquery-forms",
+    "displayName": "EnqueryForm"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "Phone": {
+      "type": "string",
+      "required": true
+    },
+    "Message": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

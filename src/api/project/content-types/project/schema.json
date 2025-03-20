@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "projects",
+  "info": {
+    "singularName": "project",
+    "pluralName": "projects",
+    "displayName": "Projects"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "ProjectName": {
+      "type": "string",
+      "required": true
+    },
+    "ProjectDescription": {
+      "type": "text",
+      "required": true
+    },
+    "ProjectYTLink": {
+      "type": "string",
+      "required": true
+    },
+    "ProjectsImages": {
+      "allowedTypes": [
+        "images",
+        "files"
+      ],
+      "type": "media",
+      "multiple": true,
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "publications_sliders",
+  "info": {
+    "singularName": "publications-slider",
+    "pluralName": "publications-sliders",
+    "displayName": "PublicationsSlider"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true
+    },
+    "PublicationsLogos": {
+      "allowedTypes": [
+        "images",
+        "files"
+      ],
+      "type": "media",
+      "multiple": true,
+      "required": true
+    }
+  }
+}

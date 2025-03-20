@@ -1,0 +1,30 @@
+{
+  "kind": "singleType",
+  "collectionName": "home_pages",
+  "info": {
+    "singularName": "home-page",
+    "pluralName": "home-pages",
+    "displayName": "HomePage",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "home_herosection": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::home-herosection.home-herosection"
+    },
+    "projects": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::project.project"
+    },
+    "publications_slider": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::publications-slider.publications-slider"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "home_herosections",
+  "info": {
+    "singularName": "home-herosection",
+    "pluralName": "home-herosections",
+    "displayName": "HomeHerosection",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Heading": {
+      "type": "string",
+      "required": true
+    },
+    "BackgroundImage": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    }
+  }
+}

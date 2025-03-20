@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "our_teams",
+  "info": {
+    "singularName": "our-team",
+    "pluralName": "our-teams",
+    "displayName": "OurTeam"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Heading": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

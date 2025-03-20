@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sticky_forms",
+  "info": {
+    "singularName": "sticky-form",
+    "pluralName": "sticky-forms",
+    "displayName": "StickyForm"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Phone": {
+      "type": "string"
+    },
+    "Email": {
+      "type": "email"
+    }
+  }
+}
