@@ -4,14 +4,15 @@
   "info": {
     "singularName": "about-hero-description",
     "pluralName": "about-hero-descriptions",
-    "displayName": "AboutHeroDescriptions"
+    "displayName": "AboutHeroDescriptions",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "attributes": {
     "description": {
-      "type": "string",
+      "type": "text",
       "required": true
     }
   }
