@@ -629,6 +629,7 @@ export interface ApiOurTeamOurTeam extends Struct.CollectionTypeSchema {
 export interface ApiProjectProject extends Struct.CollectionTypeSchema {
   collectionName: 'projects';
   info: {
+    description: '';
     displayName: 'Projects';
     pluralName: 'projects';
     singularName: 'project';
@@ -637,6 +638,7 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    ArchitectName: Schema.Attribute.String & Schema.Attribute.Required;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -646,11 +648,12 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
       'api::project.project'
     > &
       Schema.Attribute.Private;
+    PhotosBy: Schema.Attribute.String & Schema.Attribute.Required;
     ProjectDescription: Schema.Attribute.Text & Schema.Attribute.Required;
     ProjectName: Schema.Attribute.String & Schema.Attribute.Required;
     ProjectsImages: Schema.Attribute.Media<'images' | 'files', true> &
       Schema.Attribute.Required;
-    ProjectYTLink: Schema.Attribute.String & Schema.Attribute.Required;
+    ProjectYTLink: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
