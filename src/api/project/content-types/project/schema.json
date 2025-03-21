@@ -4,7 +4,8 @@
   "info": {
     "singularName": "project",
     "pluralName": "projects",
-    "displayName": "Projects"
+    "displayName": "Projects",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -20,15 +21,23 @@
     },
     "ProjectYTLink": {
       "type": "string",
-      "required": true
+      "required": false
     },
     "ProjectsImages": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
       "allowedTypes": [
         "images",
         "files"
-      ],
-      "type": "media",
-      "multiple": true,
+      ]
+    },
+    "ArchitectName": {
+      "type": "string",
+      "required": true
+    },
+    "PhotosBy": {
+      "type": "string",
       "required": true
     }
   }
