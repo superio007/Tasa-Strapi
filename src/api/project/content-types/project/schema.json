@@ -39,6 +39,15 @@
     "PhotosBy": {
       "type": "string",
       "required": true
+    },
+    "ProfilePicture": {
+      "allowedTypes": [
+        "images",
+        "files"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
     }
   }
 }
