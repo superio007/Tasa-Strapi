@@ -373,6 +373,7 @@ export interface ApiAboutHeroDescriptionAboutHeroDescription
   extends Struct.CollectionTypeSchema {
   collectionName: 'about_hero_descriptions';
   info: {
+    description: '';
     displayName: 'AboutHeroDescriptions';
     pluralName: 'about-hero-descriptions';
     singularName: 'about-hero-description';
@@ -384,7 +385,7 @@ export interface ApiAboutHeroDescriptionAboutHeroDescription
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    description: Schema.Attribute.String & Schema.Attribute.Required;
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
