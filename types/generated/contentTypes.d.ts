@@ -578,6 +578,8 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    ContactUsHeading: Schema.Attribute.String & Schema.Attribute.Required;
+    ContactUsSubHeading: Schema.Attribute.String & Schema.Attribute.Required;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -597,6 +599,7 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
       'api::publications-slider.publications-slider'
     >;
     publishedAt: Schema.Attribute.DateTime;
+    StickyFormHeading: Schema.Attribute.String & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -702,6 +705,7 @@ export interface ApiPublicationPagePublicationPage
   extends Struct.SingleTypeSchema {
   collectionName: 'publication_pages';
   info: {
+    description: '';
     displayName: 'PublicationPage';
     pluralName: 'publication-pages';
     singularName: 'publication-page';
@@ -713,6 +717,8 @@ export interface ApiPublicationPagePublicationPage
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    EnqueryHeading: Schema.Attribute.String & Schema.Attribute.Required;
+    EnquerySubHeading: Schema.Attribute.String & Schema.Attribute.Required;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',

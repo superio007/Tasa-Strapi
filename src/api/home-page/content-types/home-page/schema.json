@@ -25,6 +25,18 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::publications-slider.publications-slider"
+    },
+    "StickyFormHeading": {
+      "type": "string",
+      "required": true
+    },
+    "ContactUsHeading": {
+      "type": "string",
+      "required": true
+    },
+    "ContactUsSubHeading": {
+      "type": "string",
+      "required": true
     }
   }
 }
