@@ -810,6 +810,35 @@ export interface ApiPublicationsSliderPublicationsSlider
   };
 }
 
+export interface ApiStickyFormHeadingStickyFormHeading
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'sticky_form_headings';
+  info: {
+    displayName: 'StickyFormHeading';
+    pluralName: 'sticky-form-headings';
+    singularName: 'sticky-form-heading';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    Heading: Schema.Attribute.String & Schema.Attribute.Required;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::sticky-form-heading.sticky-form-heading'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiStickyFormStickyForm extends Struct.CollectionTypeSchema {
   collectionName: 'sticky_forms';
   info: {
@@ -1397,6 +1426,7 @@ declare module '@strapi/strapi' {
       'api::publication-page.publication-page': ApiPublicationPagePublicationPage;
       'api::publication.publication': ApiPublicationPublication;
       'api::publications-slider.publications-slider': ApiPublicationsSliderPublicationsSlider;
+      'api::sticky-form-heading.sticky-form-heading': ApiStickyFormHeadingStickyFormHeading;
       'api::sticky-form.sticky-form': ApiStickyFormStickyForm;
       'api::team-member.team-member': ApiTeamMemberTeamMember;
       'plugin::content-releases.release': PluginContentReleasesRelease;
