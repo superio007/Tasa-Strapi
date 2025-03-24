@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sticky_form_headings",
+  "info": {
+    "singularName": "sticky-form-heading",
+    "pluralName": "sticky-form-headings",
+    "displayName": "StickyFormHeading"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Heading": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
