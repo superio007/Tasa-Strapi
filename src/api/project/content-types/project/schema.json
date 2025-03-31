@@ -41,13 +41,19 @@
       "required": true
     },
     "ProfilePicture": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
       "allowedTypes": [
         "images",
         "files"
-      ],
-      "type": "media",
-      "multiple": false,
-      "required": true
+      ]
+    },
+    "featured_ons": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::featured-on.featured-on",
+      "mappedBy": "project"
     }
   }
 }

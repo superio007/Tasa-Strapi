@@ -534,6 +534,38 @@ export interface ApiEnqueryFormEnqueryForm extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiFeaturedOnFeaturedOn extends Struct.CollectionTypeSchema {
+  collectionName: 'featured_ons';
+  info: {
+    displayName: 'featuredOn';
+    pluralName: 'featured-ons';
+    singularName: 'featured-on';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    ArticalBrandlogo: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    ArticalLink: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::featured-on.featured-on'
+    > &
+      Schema.Attribute.Private;
+    project: Schema.Attribute.Relation<'manyToOne', 'api::project.project'>;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiHomeHerosectionHomeHerosection
   extends Struct.CollectionTypeSchema {
   collectionName: 'home_herosections';
@@ -650,6 +682,10 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    featured_ons: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::featured-on.featured-on'
+    >;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -1418,6 +1454,7 @@ declare module '@strapi/strapi' {
       'api::about-page.about-page': ApiAboutPageAboutPage;
       'api::contact-form.contact-form': ApiContactFormContactForm;
       'api::enquery-form.enquery-form': ApiEnqueryFormEnqueryForm;
+      'api::featured-on.featured-on': ApiFeaturedOnFeaturedOn;
       'api::home-herosection.home-herosection': ApiHomeHerosectionHomeHerosection;
       'api::home-page.home-page': ApiHomePageHomePage;
       'api::our-team.our-team': ApiOurTeamOurTeam;

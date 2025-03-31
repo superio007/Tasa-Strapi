@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "featured_ons",
+  "info": {
+    "singularName": "featured-on",
+    "pluralName": "featured-ons",
+    "displayName": "featuredOn"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "ArticalLink": {
+      "type": "string"
+    },
+    "ArticalBrandlogo": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "project": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::project.project",
+      "inversedBy": "featured_ons"
+    }
+  }
+}
