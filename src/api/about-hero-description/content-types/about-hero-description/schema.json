@@ -14,6 +14,12 @@
     "description": {
       "type": "text",
       "required": true
+    },
+    "about_hero_section_heading": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::about-hero-section.about-hero-section",
+      "inversedBy": "about_hero_descriptions"
     }
   }
 }

@@ -25,11 +25,6 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::our-team.our-team"
-    },
-    "about_hero_descriptions": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::about-hero-description.about-hero-description"
     }
   }
 }

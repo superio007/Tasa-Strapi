@@ -382,6 +382,10 @@ export interface ApiAboutHeroDescriptionAboutHeroDescription
     draftAndPublish: true;
   };
   attributes: {
+    about_hero_section_heading: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::about-hero-section.about-hero-section'
+    >;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -412,6 +416,10 @@ export interface ApiAboutHeroSectionAboutHeroSection
     draftAndPublish: true;
   };
   attributes: {
+    about_hero_descriptions: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::about-hero-description.about-hero-description'
+    >;
     BackgroundImage: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
     > &
@@ -445,10 +453,6 @@ export interface ApiAboutPageAboutPage extends Struct.SingleTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    about_hero_descriptions: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::about-hero-description.about-hero-description'
-    >;
     about_hero_section_heading: Schema.Attribute.Relation<
       'oneToOne',
       'api::about-hero-section.about-hero-section'

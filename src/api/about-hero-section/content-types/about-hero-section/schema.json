@@ -16,15 +16,21 @@
       "required": true
     },
     "BackgroundImage": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false,
-      "required": true
+      ]
+    },
+    "about_hero_descriptions": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::about-hero-description.about-hero-description",
+      "mappedBy": "about_hero_section_heading"
     }
   }
 }
