@@ -4,5 +4,5 @@ export default ({ env }) => ({
   app: { 
     keys: env.array('APP_KEYS')
   },
-  allowedHosts: ['starfish-app-ca2ju.ondigitalocean.app']
+  allowedHosts: ['i44gk44wc8sk0ww84c8sco4s.82.25.90.229.sslip.io']
 });
