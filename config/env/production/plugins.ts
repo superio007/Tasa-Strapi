@@ -7,7 +7,7 @@ export default ({env}) => ({
         privateKey: env('IMAGEKIT_PRIVATE_KEY'),
         urlEndpoint: env('IMAGEKIT_URL_ENDPOINT'),
 
-        // Optional
+        // Optional 
         params: {
             folder: env('IMAGEKIT_FOLDER'),
         }
