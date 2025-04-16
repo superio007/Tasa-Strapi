@@ -4,5 +4,5 @@ export default ({ env }) => ({
   app: {
     keys: env.array("APP_KEYS"),
   },
-  allowedHosts: ['http://c4ws8s4404ww8ow8wosok004.82.25.90.229.sslip.io/']
+  allowedHosts: ['https://akgswo8ccs0kw8kckg8gg4c8.82.25.90.229.sslip.io/']
 });
