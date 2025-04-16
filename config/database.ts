@@ -1,12 +1,13 @@
-module.exports = ({ env }) => ({
+export default ({ env }) => ({
   connection: {
-    client: 'postgres',
+    client: "postgres",
     connection: {
-      host: env('DATABASE_HOST', 'db-postgresql-blr1-23772-do-user-19116342-0.i.db.ondigitalocean.com'),
-      port: env.int('DATABASE_PORT', 25060),
-      database: env('DATABASE_NAME', 'defaultdb'),
-      user: env('DATABASE_USERNAME', 'doadmin'),
-      password: env('DATABASE_PASSWORD', 'AVNS_3BVQzOGIx_pUc4RVbtB'),
+      host: env("DATABASE_HOST"),
+      port: env.int("DATABASE_PORT"),
+      database: env("DATABASE_NAME"),
+      user: env("DATABASE_USERNAME"),
+      password: env("DATABASE_PASSWORD"),
     },
+    debug: false,
   },
 });

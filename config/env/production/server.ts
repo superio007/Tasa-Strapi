@@ -1,8 +1,8 @@
 export default ({ env }) => ({
   proxy: true,
-  url: env('APP_URL'),
-  app: { 
-    keys: env.array('APP_KEYS')
+  url: env("APP_URL"),
+  app: {
+    keys: env.array("APP_KEYS"),
   },
-  allowedHosts: ['https://akgswo8ccs0kw8kckg8gg4c8.82.25.90.229.sslip.io/']
+  allowedHosts: ['http://c4ws8s4404ww8ow8wosok004.82.25.90.229.sslip.io/']
 });
